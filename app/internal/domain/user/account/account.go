@@ -1,7 +1,7 @@
 package account
 
 import (
-	"core/values/timestamp"
+	"github.com/folyod/folyod/tree/master/app/internal/core"
 	"user/account/uuid"
 	"user/personal"
 )

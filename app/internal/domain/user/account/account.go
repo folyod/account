@@ -1,9 +1,9 @@
 package account
 
 import (
-	"user/account/uuid"
-	"user/personal"
-	"values/timestamp"
+	"folyod/internal/core/values/timestamp"
+	"folyod/internal/domain/user/account/uuid"
+	"folyod/internal/domain/user/personal"
 )
 
 type Account struct {

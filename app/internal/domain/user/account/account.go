@@ -1,9 +1,9 @@
 package account
 
 import (
-	"github.com/folyod/folyod/tree/master/app/internal/core"
 	"user/account/uuid"
 	"user/personal"
+	"values/timestamp"
 )
 
 type Account struct {

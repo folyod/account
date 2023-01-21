@@ -11,7 +11,7 @@ func (command CreateAccountCommand) Name() string {
 	return command.name
 }
 
-func (command CreateAccountCommand) Login() string {
+func (command CreateAccountCommand) Nickname() string {
 	return command.login
 }
 

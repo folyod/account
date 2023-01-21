@@ -2,12 +2,16 @@ package account
 
 import (
 	"folyod/internal/core/values/timestamp"
-	"folyod/internal/domain/user/account/uuid"
-	"folyod/internal/domain/user/personal"
+	"folyod/internal/domain/user/account/values/nickname"
+	"folyod/internal/domain/user/account/values/uuid"
 )
 
 type Account struct {
 	uuid      uuid.AccountUuid
-	personal  personal.Personal
+	nickname  nickname.Nickname
 	createdAt timestamp.Timestamp
+}
+
+func (a *Account) Uuid() uuid.AccountUuid {
+	return a.uuid
 }

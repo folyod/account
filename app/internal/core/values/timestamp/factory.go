@@ -19,8 +19,8 @@ func MakeFromString(timestamp string) (*Timestamp, error) {
 	return value, nil
 }
 
-func Now() *Timestamp {
-	return &Timestamp{
+func Now() Timestamp {
+	return Timestamp{
 		value: time.Now(),
 	}
 }

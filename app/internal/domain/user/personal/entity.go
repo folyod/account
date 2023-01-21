@@ -1,8 +1,8 @@
 package personal
 
 import (
-	"user/internal/domain/account/uuid"
-	"user/internal/domain/personal/name"
+	"folyod/internal/domain/user/account/values/uuid"
+	"folyod/internal/domain/user/personal/values/name"
 )
 
 type Personal struct {

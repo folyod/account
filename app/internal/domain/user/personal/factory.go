@@ -1,17 +1,17 @@
 package personal
 
 import (
-	"user/internal/domain/account/uuid"
-	"user/internal/domain/personal/name"
+	"folyod/internal/domain/user/account"
+	"folyod/internal/domain/user/personal/values/name"
 )
 
 type createPersonalDto interface {
 	Name() string
 }
 
-func Make(dto createPersonalDto) Personal {
+func New(account account.Account, dto createPersonalDto) Personal {
 	return Personal{
-		accountUuid: uuid.AccountUuid{},
-		name:        name.Name{},
+		accountUuid: account.Uuid(),
+		name:        name.Make(dto.Name()),
 	}
 }

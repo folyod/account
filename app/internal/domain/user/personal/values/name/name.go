@@ -4,12 +4,6 @@ type Name struct {
 	value string
 }
 
-func Make(name string) Name {
-	return Name{
-		value: name,
-	}
-}
-
 func (n *Name) Value() string {
 	return n.value
 }

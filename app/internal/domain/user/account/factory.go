@@ -1,14 +1,19 @@
 package account
 
 import (
-	"user/internal/domain/account/uuid"
-	account "user/public"
+	"folyod/internal/core/values/timestamp"
+	"folyod/internal/domain/user/account/values/nickname"
+	"folyod/internal/domain/user/account/values/uuid"
 )
 
-func CreateAccount(command account.CreateAccountCommand) Account {
+type createAccountDto interface {
+	Nickname() string
+}
+
+func NewAccount(dto createAccountDto) Account {
 	return Account{
-		uuid:     uuid.New(),
-		personal: personal.,
-		createdAt: nil,
+		uuid:      uuid.New(),
+		nickname:  nickname.Make(dto.Nickname()),
+		createdAt: timestamp.Now(),
 	}
 }

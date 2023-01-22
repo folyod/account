@@ -7,7 +7,7 @@ import (
 )
 
 type User struct {
-	account.Account
-	personal.Personal
-	auth.Auth
+	Account  account.Account
+	Personal personal.Personal
+	Auth     auth.Auth
 }

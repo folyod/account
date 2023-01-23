@@ -1,7 +1,6 @@
 package personal
 
 import (
-	"folyod/internal/domain/user/account"
 	"folyod/internal/domain/user/personal/values/name"
 )
 

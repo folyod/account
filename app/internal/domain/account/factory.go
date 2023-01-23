@@ -2,8 +2,8 @@ package account
 
 import (
 	"folyod/internal/core/values/timestamp"
-	"folyod/internal/domain/user/account/values/nickname"
-	"folyod/internal/domain/user/account/values/uuid"
+	"folyod/internal/domain/user/values/nickname"
+	"folyod/internal/domain/user/values/uuid"
 )
 
 type createAccountDto interface {

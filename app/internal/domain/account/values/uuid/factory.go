@@ -4,8 +4,8 @@ import (
 	uuid "github.com/google/uuid"
 )
 
-func Make(uuid string) (*AccountUuid, error) {
-	value := &AccountUuid{
+func Make(uuid string) (AccountUuid, error) {
+	value := AccountUuid{
 		value: uuid,
 	}
 

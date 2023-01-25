@@ -1,11 +1,9 @@
 package email
 
-type createAuthDto interface {
-	Email() string
-	Password() string
-	Phone() string
-}
+func Make(email string) (Email, error) {
+	object := Email{
+		value: email,
+	}
 
-func New() {
-
+	return object, object.Validate()
 }

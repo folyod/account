@@ -5,6 +5,10 @@ type Email struct {
 }
 
 func (e *Email) Value() string {
+	err := e.Validate()
+	if err != nil {
+		panic(err.Error())
+	}
 	return e.value
 }
 

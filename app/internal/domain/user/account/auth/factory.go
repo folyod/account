@@ -1,10 +1,9 @@
 package auth
 
 import (
-	"folyod/internal/domain/account/subdomain/auth/values/email"
-	"folyod/internal/domain/account/subdomain/auth/values/password"
-	"folyod/internal/domain/account/subdomain/auth/values/phone"
-	"folyod/internal/domain/account/values/uuid"
+	"folyod/internal/domain/user/account/auth/values/email"
+	"folyod/internal/domain/user/account/auth/values/password"
+	"folyod/internal/domain/user/account/auth/values/phone"
 )
 
 type createAuthDto interface {
@@ -13,9 +12,8 @@ type createAuthDto interface {
 	Password() string
 }
 
-func Create(accountUuid string, dto createAuthDto) Auth {
+func Create(dto createAuthDto) Auth {
 	errorBag := []error{}
-	uuidValue, err := uuid.Make(accountUuid)
 	errorBag = append(errorBag, err)
 	emailValue := email.Make(dto.Email())
 	passwordValue := password.Hashed(dto.Password())

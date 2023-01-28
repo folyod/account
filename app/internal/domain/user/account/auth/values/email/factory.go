@@ -1,9 +1,9 @@
 package email
 
 func Make(email string) (Email, error) {
-	object := Email{
+	vo := Email{
 		value: email,
 	}
 
-	return object, object.Validate()
+	return vo, vo.Validate()
 }

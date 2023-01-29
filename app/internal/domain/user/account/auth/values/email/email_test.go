@@ -1,11 +1,17 @@
 package email
 
-import "testing"
+import (
+	"folyod/internal/core/tester"
+	"testing"
+)
 
-func testCreateEmail(t *testing.T) {
-	email, err := Make("test@example.com")
+func TestCreateCorrectEmail(t *testing.T) {
+	_, err := Make("correctemail@email.com")
+	tester.AssertNil(t, err)
+}
 
-	if email.Value() != "test@example.com" {
-		t.Errorf("")
-	}
+func TestIncorrectEmail(t *testing.T) {
+	_, err := Make("incorrectemail")
+	tester.AssertNotNil(t, err)
+	tester.AssertSame(t, "Value is not correct email", err.Error())
 }

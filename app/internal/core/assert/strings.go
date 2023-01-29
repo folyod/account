@@ -27,3 +27,7 @@ func (s *Str) Empty() bool {
 func (s *Str) NotEmpty() bool {
 	return s.value != ""
 }
+
+func (s *Str) IsEmail() bool {
+	return s.value != ""
+}

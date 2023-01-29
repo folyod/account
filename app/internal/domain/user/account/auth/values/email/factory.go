@@ -1,9 +1,12 @@
 package email
 
-func Make(email string) (Email, error) {
-	vo := Email{
+func Make(email string) (*Email, error) {
+	vo := &Email{
 		value: email,
 	}
-
-	return vo, vo.Validate()
+	err := vo.Validate()
+	if err != nil {
+		return nil, err
+	}
+	return vo, nil
 }

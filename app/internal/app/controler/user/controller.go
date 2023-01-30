@@ -2,6 +2,7 @@ package user
 
 import (
 	"errors"
+	"folyod/internal/domain/user/account"
 )
 
 type registerRequest interface {

@@ -1,0 +1,5 @@
+package classic
+
+func CreateAccount() {
+
+}
